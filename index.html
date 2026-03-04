@@ -8,39 +8,39 @@
         /* =========================
    ЛОКАЛЬНЫЕ ШРИФТЫ (как в index)
 ========================= */
-        @font-face {
-            font-family: 'Inter';
-            src: url('./fonts/inter-cyrillic-400-normal.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
-        }
-        
-        @font-face {
-            font-family: 'Inter';
-            src: url('./fonts/inter-cyrillic-500-normal.woff2') format('woff2');
-            font-weight: 500;
-            font-style: normal;
-            font-display: swap;
-        }
-        
-        @font-face {
-            font-family: 'Inter';
-            src: url('./fonts/inter-cyrillic-600-normal.woff2') format('woff2');
-            font-weight: 600;
-            font-style: normal;
-            font-display: swap;
-        }
-        
-        @font-face {
-            font-family: 'Inter';
-            src: url('./fonts/inter-cyrillic-700-normal.woff2') format('woff2');
-            font-weight: 700;
-            font-style: normal;
-            font-display: swap;
-        }
-        
-        /* =========================
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/inter-cyrillic-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/inter-cyrillic-500-normal.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/inter-cyrillic-600-normal.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/inter-cyrillic-700-normal.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* =========================
    RESET
 ========================= */
 * {
@@ -248,6 +248,92 @@ p {
 }
 
 /* =========================
+   VETERANS GRID - КАК У ГЛАВНЫХ ВРАЧЕЙ
+========================= */
+.veterans-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 45px 0;
+}
+
+.veteran-item {
+    width: 100%;
+    background: #f8f9fa;
+    padding: 20px 20px 25px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #8B0000;
+    box-sizing: border-box;
+}
+
+.veteran-item .person-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.veteran-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.veteran-item .image-container {
+    margin: 15px 0 0 0;
+}
+
+.veteran-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Блок для ветеранов без фото */
+.veterans-without-photo {
+    margin: 30px 0 50px 0;
+    padding: 30px;
+    background: linear-gradient(145deg, #f8f9fa, #f0f3f5);
+    border-radius: 12px;
+    border-left: 6px solid #8B0000;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.veterans-without-photo h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.6rem;
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
+}
+
+.veterans-without-photo .two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.veterans-without-photo .person-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #8B0000;
+}
+
+.veterans-without-photo p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+/* =========================
    QUOTE & POEM
 ========================= */
 .quote {
@@ -359,110 +445,24 @@ p {
 
     .pair-images,
     .triple-images,
-    .doctors-grid {
-        grid-template-columns: 1fr;
+    .doctors-grid,
+    .veterans-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
     }
 
     .pair-images img,
     .doctor-item img {
         height: 260px;
     }
-
-    .large-photo img {
-        max-width: 100%;
-        max-height: 400px;
-    }
-    /* Сетка для ветеранов - строго 2 колонки */
-.veterans-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin: 40px 0;
-}
-
-/* Карточка ветерана */
-.veteran-item {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 3px solid #8B0000;
-    height: fit-content;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.veteran-item .person-name {
-    margin: 0 0 10px 0;
-    font-size: 1.4rem;
-}
-
-.veteran-item p {
-    margin-bottom: 15px;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.veteran-item .image-container {
-    margin: 15px 0 5px 0;
-}
-
-.veteran-item img {
-    max-height: 220px;
-    width: 100%;
-    object-fit: contain;
-    background: white;
-    padding: 8px;
-    border-radius: 6px;
-}
-
-/* Блок для ветеранов без фото */
-.veterans-without-photo {
-    margin: 30px 0 40px 0;
-    padding: 25px;
-    background: #f0f3f5;
-    border-radius: 8px;
-    border-left: 6px solid #8B0000;
-}
-
-.veterans-without-photo h3 {
-    margin: 0 0 15px 0;
-    font-size: 1.5rem;
-    font-family: 'Playfair Display', serif;
-}
-
-.veterans-without-photo .two-columns {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.veterans-without-photo .person-name {
-    margin: 15px 0 5px 0;
-    font-size: 1.3rem;
-}
-
-.veterans-without-photo .person-name:first-of-type {
-    margin-top: 0;
-}
-
-.veterans-without-photo p {
-    margin-bottom: 0;
-    font-size: 1rem;
-}
-
-/* Мобильная версия - строго 2 колонки, без выхода за край */
-@media (max-width: 768px) {
-    .veterans-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 15px;
-    }
     
     .veteran-item {
-        padding: 12px;
+        padding: 12px 12px 15px 12px;
     }
     
     .veteran-item .person-name {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        margin-bottom: 6px;
     }
     
     .veteran-item p {
@@ -471,21 +471,27 @@ p {
     }
     
     .veteran-item img {
-        max-height: 150px;
-        padding: 4px;
+        height: 160px;
+        padding: 5px;
+    }
+
+    .large-photo img {
+        max-width: 100%;
+        max-height: 400px;
     }
     
     .veterans-without-photo .two-columns {
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        gap: 15px;
     }
     
     .veterans-without-photo {
-        padding: 18px;
+        padding: 20px;
     }
     
     .veterans-without-photo h3 {
         font-size: 1.3rem;
+        margin-bottom: 15px;
     }
     
     .veterans-without-photo .person-name {
@@ -495,7 +501,6 @@ p {
     .veterans-without-photo p {
         font-size: 0.9rem;
     }
-}
 }
     </style>
 </head>
