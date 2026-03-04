@@ -660,59 +660,89 @@ p {
             <p class="photo-caption">Главный врач Лукаш Т.И. с коллегами на территории диспансера: справа от неё - врач фтизиатр Яркова Н.Н. работает с <span class="year">1998 года</span> по настоящее время; участковая м.с. Антонова Г.М. стаж работы в диспансере 35 лет; процедурная м.с. стационара Лустина В.В.; старшая м.с. стационара Холинова З.В.; процедурная м.с. Львова Н.В.; врач-фтизиатр Грачева Н.А.; врач-фтизиатр Пономарева Т.Я. работает по настоящее время, стаж 31 год. Слева снизу старшая м.с. стационара Гуськова Л.Б.; участковая м.с. Белявская Т.М.; повар Софронова Н.М.</p>
         </div>
         
-        <!-- НАЧАЛО: Блок с ветеранами ВОВ (НОВЫЕ НОМЕРА image40.png и далее) -->
-        <h2>Участники Великой Отечественной войны</h2>
-        <p>"Проходят годы и десятилетия, рождаются и вырастают новые поколения, но никогда не померкнет в памяти великий подвиг Советской страны в битве с гитлеровским фашизмом"</p>
+        <!-- НАЧАЛО: Блок с ветеранами ВОВ в два ряда -->
+<h2>Участники Великой Отечественной войны</h2>
+<p class="quote" style="margin-top: 0;">"Проходят годы и десятилетия, рождаются и вырастают новые поколения, но никогда не померкнет в памяти великий подвиг Советской страны в битве с гитлеровским фашизмом"</p>
 
-        <div class="person-name">Баранов Илья Андреевич</div>
-        <p>Врач-фтизиатр. Был взят добровольцем. Центральный фронт. Награжден: Орден Отечественной войны I степени, медаль "За победу над Германией в Великой Отечественной войне"</p>
-        <div class="image-container">
-            <img src="image40.png" alt="Баранов Илья Андреевич" onclick="openPhotoModal(this)">
+<div class="veterans-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin: 40px 0;">
+
+    <!-- Баранов Илья Андреевич -->
+    <div class="veteran-item">
+        <div class="person-name" style="margin: 0 0 5px 0; font-size: 1.4rem;">Баранов Илья Андреевич</div>
+        <p style="margin-bottom: 10px;">Врач-фтизиатр. Был взят добровольцем. Центральный фронт. Награжден: Орден Отечественной войны I степени, медаль "За победу над Германией в Великой Отечественной войне"</p>
+        <div class="image-container" style="margin: 10px 0;">
+            <img src="image40.png" alt="Баранов Илья Андреевич" onclick="openPhotoModal(this)" style="max-height: 250px;">
         </div>
+    </div>
 
-        <div class="person-name">Белова Мария Николаевна</div>
-        <p>Медицинская сестра. Западный фронт, II Белорусский фронт. Награждена: медаль "За победу над Германией в Великой Отечественной войне"</p>
-        <div class="image-container">
-            <img src="image41.png" alt="Белова Мария Николаевна" onclick="openPhotoModal(this)">
+    <!-- Белова Мария Николаевна -->
+    <div class="veteran-item">
+        <div class="person-name" style="margin: 0 0 5px 0; font-size: 1.4rem;">Белова Мария Николаевна</div>
+        <p style="margin-bottom: 10px;">Медицинская сестра. Западный фронт, II Белорусский фронт. Награждена: медаль "За победу над Германией в Великой Отечественной войне"</p>
+        <div class="image-container" style="margin: 10px 0;">
+            <img src="image41.png" alt="Белова Мария Николаевна" onclick="openPhotoModal(this)" style="max-height: 250px;">
         </div>
+    </div>
 
-        <div class="person-name">Отева Тамара Михайловна</div>
-        <p>Врач-фтизиатр. III Белорусский фронт. Награждена: медаль "За победу над Германией в Великой Отечественной войне", Медаль "За взятие Кенигсберга"</p>
-        <div class="image-container">
-            <img src="image42.png" alt="Отева Тамара Михайловна" onclick="openPhotoModal(this)">
+    <!-- Отева Тамара Михайловна -->
+    <div class="veteran-item">
+        <div class="person-name" style="margin: 0 0 5px 0; font-size: 1.4rem;">Отева Тамара Михайловна</div>
+        <p style="margin-bottom: 10px;">Врач-фтизиатр. III Белорусский фронт. Награждена: медаль "За победу над Германией в Великой Отечественной войне", Медаль "За взятие Кенигсберга"</p>
+        <div class="image-container" style="margin: 10px 0;">
+            <img src="image42.png" alt="Отева Тамара Михайловна" onclick="openPhotoModal(this)" style="max-height: 250px;">
         </div>
+    </div>
 
-        <div class="person-name">Петров Владимир Михайлович</div>
-        <p>Рентген-лаборант. Награжден: медаль "За победу над Германией в Великой Отечественной войне"</p>
-        <div class="image-container">
-            <img src="image43.png" alt="Петров Владимир Михайлович" onclick="openPhotoModal(this)">
+    <!-- Петров Владимир Михайлович -->
+    <div class="veteran-item">
+        <div class="person-name" style="margin: 0 0 5px 0; font-size: 1.4rem;">Петров Владимир Михайлович</div>
+        <p style="margin-bottom: 10px;">Рентген-лаборант. Награжден: медаль "За победу над Германией в Великой Отечественной войне"</p>
+        <div class="image-container" style="margin: 10px 0;">
+            <img src="image43.png" alt="Петров Владимир Михайлович" onclick="openPhotoModal(this)" style="max-height: 250px;">
         </div>
+    </div>
 
-        <div class="person-name">Белослюд Елизавета Георгиевна</div>
-        <p>Врач-фтизиоларинголог. 305 Медсанбат. Награждена: медаль "За победу над Германией в Великой Отечественной войне"</p>
-        <div class="image-container">
-            <img src="image44.png" alt="Белослюд Елизавета Георгиевна" onclick="openPhotoModal(this)">
+    <!-- Белослюд Елизавета Георгиевна -->
+    <div class="veteran-item">
+        <div class="person-name" style="margin: 0 0 5px 0; font-size: 1.4rem;">Белослюд Елизавета Георгиевна</div>
+        <p style="margin-bottom: 10px;">Врач-фтизиоларинголог. 305 Медсанбат. Награждена: медаль "За победу над Германией в Великой Отечественной войне"</p>
+        <div class="image-container" style="margin: 10px 0;">
+            <img src="image44.png" alt="Белослюд Елизавета Георгиевна" onclick="openPhotoModal(this)" style="max-height: 250px;">
         </div>
+    </div>
 
-        <div class="person-name">Брызгалова Валентина Васильевна</div>
-        <p>Медицинская сестра. Награждена: медаль "За победу над Германией в Великой Отечественной войне"</p>
-        <div class="image-container">
-            <img src="image45.png" alt="Брызгалова Валентина Васильевна" onclick="openPhotoModal(this)">
+    <!-- Брызгалова Валентина Васильевна -->
+    <div class="veteran-item">
+        <div class="person-name" style="margin: 0 0 5px 0; font-size: 1.4rem;">Брызгалова Валентина Васильевна</div>
+        <p style="margin-bottom: 10px;">Медицинская сестра. Награждена: медаль "За победу над Германией в Великой Отечественной войне"</p>
+        <div class="image-container" style="margin: 10px 0;">
+            <img src="image45.png" alt="Брызгалова Валентина Васильевна" onclick="openPhotoModal(this)" style="max-height: 250px;">
         </div>
+    </div>
 
-        <div class="person-name">Ярцев Тихон Амвросимович</div>
-        <p>Врач-фтизиатр. Был взят добровольцем. Центральный фронт. Награжден: Орден Отечественной войны I степени, медаль "За победу над Германией в Великой Отечественной войне"</p>
-        <div class="image-container">
-            <img src="image46.png" alt="Ярцев Тихон Амвросимович" onclick="openPhotoModal(this)">
+    <!-- Ярцев Тихон Амвросимович -->
+    <div class="veteran-item">
+        <div class="person-name" style="margin: 0 0 5px 0; font-size: 1.4rem;">Ярцев Тихон Амвросимович</div>
+        <p style="margin-bottom: 10px;">Врач-фтизиатр. Был взят добровольцем. Центральный фронт. Награжден: Орден Отечественной войны I степени, медаль "За победу над Германией в Великой Отечественной войне"</p>
+        <div class="image-container" style="margin: 10px 0;">
+            <img src="image46.png" alt="Ярцев Тихон Амвросимович" onclick="openPhotoModal(this)" style="max-height: 250px;">
         </div>
+    </div>
 
-        <!-- Теперь без фото (только текст) -->
-<div class="person-name">Точилин Владимир Прохорович</div>
-<p>Кочегар. 201 Воздушная десантная бригада.</p>
+    <!-- Точилин Владимир Прохорович (без фото) -->
+    <div class="veteran-item">
+        <div class="person-name" style="margin: 0 0 5px 0; font-size: 1.4rem;">Точилин Владимир Прохорович</div>
+        <p style="margin-bottom: 10px;">Кочегар. 201 Воздушная десантная бригада.</p>
+    </div>
 
-<div class="person-name">Горулев Гавриил Степанович</div>
-<p>Врач-фтизиатр. Награжден: медаль "За победу над Германией в Великой Отечественной войне"</p>
-        <!-- КОНЕЦ: Блок с ветеранами ВОВ -->
+    <!-- Горулев Гавриил Степанович (без фото) -->
+    <div class="veteran-item">
+        <div class="person-name" style="margin: 0 0 5px 0; font-size: 1.4rem;">Горулев Гавриил Степанович</div>
+        <p style="margin-bottom: 10px;">Врач-фтизиатр. Награжден: медаль "За победу над Германией в Великой Отечественной войне"</p>
+    </div>
+
+</div>
+<!-- КОНЕЦ: Блок с ветеранами ВОВ -->
         
         <p>С <span class="year">2014 года</span> Клинский противотуберкулёзный диспансер вывели из здания усадьбы и разместили на базе поликлиники №3 Клинской больницы.</p>
         
