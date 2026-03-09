@@ -195,7 +195,7 @@ p {
 }
 
 /* =========================
-   ПАРНЫЕ ФОТО (ЭТАЛОН)
+   ПАРНЫЕ ФОТО
 ========================= */
 .pair-images {
     display: grid;
@@ -216,7 +216,7 @@ p {
 }
 
 /* =========================
-   ТРОЙНЫЕ ФОТО
+   ТРОЙНЫЕ ФОТО (НЕ ТРОГАЕМ)
 ========================= */
 .triple-images {
     display: grid;
@@ -444,34 +444,84 @@ p {
         padding: 22px 18px;
     }
 
-    /* СЕТКИ НА МОБИЛКАХ */
-    .pair-images,
-    .triple-images,
-    .veterans-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 15px;
-    }
-
     /* Главные врачи — в один столбец */
     .doctors-grid {
         grid-template-columns: 1fr !important;
         gap: 25px;
     }
 
-    /* Все фото в сетках */
-    .pair-images img,
-    .triple-images img,
-    .doctors-grid img,
-    .veteran-item img {
-        height: 200px;
-        object-fit: contain;
-        background: #f8f9fa;
-        padding: 8px;
-        border-radius: 8px;
-        border: 1px solid #eee;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    /* ТОЛЬКО КОНКРЕТНЫЕ ПАРЫ ФОТО — ДРУГ ПОД ДРУГОМ */
+    /* 1943 год — стационар расширен (image6 и image7) */
+    .pair-images:has(img[src*="image6.png"]),
+    .pair-images:has(img[src*="image7.png"]) {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    /* Флюорограф на Skoda (image14, image15, image16) */
+    .triple-images:has(img[src*="image14.png"]),
+    .triple-images:has(img[src*="image15.png"]),
+    .triple-images:has(img[src*="image16.png"]) {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    /* Перед "Урсов на обходе" (image17 и image18) */
+    .pair-images:has(img[src*="image17.png"]),
+    .pair-images:has(img[src*="image18.png"]) {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    /* Сотрудники 1956 и 1957 (image21 и image22) */
+    .pair-images:has(img[src*="image21.png"]),
+    .pair-images:has(img[src*="image22.png"]) {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    /* Беседа с больными и субботник (image29 и image30) */
+    .pair-images:has(img[src*="image29.png"]),
+    .pair-images:has(img[src*="image30.png"]) {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    /* Два фото Карпичева (image35 и image36) */
+    .pair-images:has(img[src*="image35.png"]),
+    .pair-images:has(img[src*="image36.png"]) {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    /* Последние две фотографии (image38 и image39) */
+    .pair-images:has(img[src*="image38.png"]),
+    .pair-images:has(img[src*="image39.png"]) {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
     }
 
+    /* Все фото в этих блоках — нормального размера */
+    .pair-images img,
+    .triple-images img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+        background: #f8f9fa;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #eee;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        margin-bottom: 5px;
+    }
+
+    /* Ветераны остаются без изменений */
+    .veterans-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
+    }
+    
     .veteran-item {
         padding: 12px 12px 15px 12px;
     }
@@ -484,6 +534,11 @@ p {
     .veteran-item p {
         font-size: 0.9rem;
         margin-bottom: 10px;
+    }
+    
+    .veteran-item img {
+        height: 180px;
+        object-fit: contain;
     }
 
     .large-photo img {
