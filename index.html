@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Филиал «Клинский» ГБУЗ МО «МОКПТД» - Историческая справка</title>
     <style>
-        /* =========================
-   ЛОКАЛЬНЫЕ ШРИФТЫ (как в index)
+       /* =========================
+   ШРИФТЫ
 ========================= */
 @font-face {
     font-family: 'Inter';
@@ -41,7 +41,7 @@
 }
 
 /* =========================
-   RESET
+   СБРОС
 ========================= */
 * {
     margin: 0;
@@ -50,7 +50,7 @@
 }
 
 /* =========================
-   BASE
+   ОСНОВНОЕ
 ========================= */
 body {
     font-family: 'Inter', 'Open Sans', sans-serif;
@@ -73,7 +73,7 @@ body {
 }
 
 /* =========================
-   TYPOGRAPHY
+   ТЕКСТ
 ========================= */
 h1 {
     font-family: 'Playfair Display', serif;
@@ -129,7 +129,38 @@ p {
 }
 
 /* =========================
-   IMAGE SYSTEM
+   ЦИТАТЫ И СТИХИ
+========================= */
+.quote {
+    font-family: 'Lora', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.7;
+    background: #f8f9fa;
+    border-left: 6px solid #8B0000;
+    padding: 35px;
+    margin: 50px 0;
+}
+
+.poem {
+    font-family: 'Lora', serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    background: #fff5e6;
+    padding: 40px;
+    border-radius: 8px;
+    margin: 50px 0;
+}
+
+.poem-author {
+    text-align: right;
+    margin-top: 20px;
+    font-style: italic;
+    color: #8B0000;
+}
+
+/* =========================
+   СЕТКИ ДЛЯ ФОТО
 ========================= */
 .image-container {
     margin: 45px 0;
@@ -153,27 +184,6 @@ p {
     transform: scale(1.02);
 }
 
-.photo-caption,
-.doctor-caption {
-    font-family: 'Lora', serif;
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
-    margin-top: 12px;
-}
-
-.photo-caption {
-    font-style: italic;
-}
-
-.doctor-caption {
-    font-weight: 500;
-    color: #2c3e50;
-}
-
-/* =========================
-   IMAGE MODIFIERS
-========================= */
 .horizontal-photo {
     max-width: 90%;
     max-height: 400px;
@@ -184,9 +194,7 @@ p {
     max-height: 500px;
 }
 
-/* =========================
-   IMAGE GRIDS
-========================= */
+/* Парные фото - КАК ЭТАЛОН */
 .pair-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -205,6 +213,7 @@ p {
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
+/* Тройные фото */
 .triple-images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -228,7 +237,7 @@ p {
 }
 
 /* =========================
-   DOCTORS GRID
+   ГЛАВНЫЕ ВРАЧИ - ТОЧНО КАК ПАРНЫЕ ФОТО
 ========================= */
 .doctors-grid {
     display: grid;
@@ -237,18 +246,37 @@ p {
     margin: 45px 0;
 }
 
-.doctor-item img {
+.doctors-grid .doctor-item img {
     width: 100%;
-    height: 300px;
+    height: 320px;  /* ТОЧНО КАК В .pair-images img */
     object-fit: contain;
     background: #f8f9fa;
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #eee;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* ТОЧНО КАК В .pair-images img */
+}
+
+.doctors-grid .doctor-caption {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2c3e50;
+    line-height: 1.5;
+    margin-top: 12px;
+}
+
+.doctors-grid .photo-caption {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 4px;
 }
 
 /* =========================
-   VETERANS GRID - КАК У ГЛАВНЫХ ВРАЧЕЙ
+   ВЕТЕРАНЫ (как у главных врачей)
 ========================= */
 .veterans-grid {
     display: grid;
@@ -263,7 +291,6 @@ p {
     padding: 20px 20px 25px 20px;
     border-radius: 8px;
     border-left: 4px solid #8B0000;
-    box-sizing: border-box;
 }
 
 .veteran-item .person-name {
@@ -295,7 +322,7 @@ p {
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-/* Блок для ветеранов без фото */
+/* Ветераны без фото */
 .veterans-without-photo {
     margin: 30px 0 50px 0;
     padding: 30px;
@@ -334,38 +361,7 @@ p {
 }
 
 /* =========================
-   QUOTE & POEM
-========================= */
-.quote {
-    font-family: 'Lora', serif;
-    font-size: 1.3rem;
-    font-style: italic;
-    line-height: 1.7;
-    background: #f8f9fa;
-    border-left: 6px solid #8B0000;
-    padding: 35px;
-    margin: 50px 0;
-}
-
-.poem {
-    font-family: 'Lora', serif;
-    font-size: 1.3rem;
-    line-height: 1.8;
-    background: #fff5e6;
-    padding: 40px;
-    border-radius: 8px;
-    margin: 50px 0;
-}
-
-.poem-author {
-    text-align: right;
-    margin-top: 20px;
-    font-style: italic;
-    color: #8B0000;
-}
-
-/* =========================
-   FOOTER
+   ПОДВАЛ
 ========================= */
 .footer {
     margin-top: 50px;
@@ -377,7 +373,7 @@ p {
 }
 
 /* =========================
-   MODAL
+   МОДАЛКА ДЛЯ ФОТО
 ========================= */
 .photo-modal {
     display: none;
@@ -409,7 +405,7 @@ p {
 }
 
 /* =========================
-   MOBILE (COMFORT READING)
+   МОБИЛЬНАЯ ВЕРСИЯ
 ========================= */
 @media (max-width: 768px) {
 
@@ -451,11 +447,20 @@ p {
         gap: 15px;
     }
 
+    /* ВСЕ фото в сетках одинаково на мобилках */
     .pair-images img,
-    .doctor-item img {
-        height: 260px;
+    .triple-images img,
+    .doctors-grid .doctor-item img,
+    .veteran-item img {
+        height: 200px;
+        object-fit: contain;
+        background: #f8f9fa;
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid #eee;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
-    
+
     .veteran-item {
         padding: 12px 12px 15px 12px;
     }
@@ -468,11 +473,6 @@ p {
     .veteran-item p {
         font-size: 0.9rem;
         margin-bottom: 10px;
-    }
-    
-    .veteran-item img {
-        height: 160px;
-        padding: 5px;
     }
 
     .large-photo img {
